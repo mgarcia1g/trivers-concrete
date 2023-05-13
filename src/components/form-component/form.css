@@ -1,0 +1,73 @@
+.form_page{
+    text-align: center;
+    background-color: white;
+    width: 600px;
+    height: 620px;
+    margin: auto;
+    border-radius: 15px;
+    padding-bottom: 30px;
+    max-width: 100%;
+}
+
+.getFreeEstimatebtn{
+    color: black;
+    font-size: large;
+    font-weight: 10em;
+}
+.arrow{
+    color: red;
+    font-size: 100px;
+    border-radius: 800%;
+}
+
+input, select{
+    padding: 15px;
+    margin: 15px;
+    width: 400px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+   
+    border: 1px solid #ccc;
+   
+    box-sizing: border-box;
+  
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.x{
+    float: right;
+}
+
+@media screen and (min-width: 200px)and (max-width: 435px) {
+    .form_page{
+        text-align: center;
+        background-color: white;
+        width: 400px;
+        height: 620px;
+        margin: auto;
+        border-radius: 15px;
+        padding-bottom: 30px;
+     
+    }
+    input, select{
+        padding: 15px;
+        margin: 15px;
+        width: 300px;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+    
+       
+        border: 1px solid #ccc;
+       
+        box-sizing: border-box;
+      
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+
+}
+
+
