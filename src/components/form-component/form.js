@@ -13,10 +13,10 @@ const Form = ({ signUp }) => {
 
     }
 
-    const [value, setValue] = useState("");
+    const [serviceNeeded, setServiceNeeded] = useState("");
 
     const handleChange = (e) => {
-        setValue(e.target.value);
+        setServiceNeeded(e.target.value);
     };
 
 
@@ -39,13 +39,12 @@ const Form = ({ signUp }) => {
             <h2 className="getFreeEstimatebtn">Get Your FREE Estimate! </h2>
             <form className="form" ref={form} onSubmit={sendEmail}>
                 <label>
-                    <div>What Service Do You Need?</div>
-                    <select value={value} onChange={handleChange}>
-                        <option  disabled selected>What Service Do You Need?</option>
+                    <select value={serviceNeeded} onChange={handleChange}>
+                        <option   selected>What Service Do You Need?</option>
                         <option value="Driveway installation or repair">Driveway installation or repair</option>
                         <option value="Patio or walkway installation or repair">Patio or walkway installation or repair</option>
                         <option value="Foundation installation or repair">Foundation installation or repair</option>
-                        <option value="concrete staining or sealing">concrete staining or sealing</option>
+                        <option value="Concrete staining or sealing">concrete staining or sealing</option>
                         <option value="Other">other</option>
                     </select>
                 </label><br />
@@ -58,11 +57,11 @@ const Form = ({ signUp }) => {
                     name="user_email"
                     required /><br />
                 <input type="tel" id="phone"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                    placeholder="(xxx)-xxx-xxxx"
+                    pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                    placeholder="7 digit phone number"
                     name="number"
                     required /><br />
-                <textarea name="message" color="0" rows="0" value={"value"} hidden={true} />
+                <textarea name="message" color="0" rows="0" value={serviceNeeded} hidden={true}/>
                 <br />
                 <button type="submit" > send message</button>
             </form>
