@@ -1,7 +1,7 @@
 import './App.css';
 import BusinessLogoComponent from './components/cards-component/businessLogoComponent/businessLogoComponent';
-function App() {
 
+function App() {
 
   return (
     <div className="App">
