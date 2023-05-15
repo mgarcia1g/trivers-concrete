@@ -15,7 +15,12 @@ export default function CompanyInfoComponent() {
     function signUp(change) {
         setShowForm(change);
         console.log(change)
+        window.scrollTo({
+            top: 50,
+            behavior: 'smooth',
+        });
     }
+   
     return (
         <div className="main">
             <img className="logo" src={logo} alt="logo" />

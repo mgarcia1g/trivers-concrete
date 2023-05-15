@@ -33,7 +33,7 @@ const Form = ({ signUp }) => {
     };
 
     return (
-        <div className="form_page">
+        <div className="form_page ">
             <img  className="x" src={closeImg} alt="x" onClick={turnSignUpFalse}/>
             <div className="arrow">☞ </div>
             <h2 className="getFreeEstimatebtn">Get Your FREE Estimate! </h2>
