@@ -2,7 +2,19 @@ import React, { useRef, useState } from "react";
 import emailjs from '@emailjs/browser'
 import '../form-component/form.css'
 import closeImg from '../../images/x.png'
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+toast.configure();
 const Form = ({ signUp }) => {
+
+    const notify = () => {
+        toast.success("Submitted!", {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 20000
+        });
+    
+      };
 
     const form = useRef();
     let turnFormOff = false;
@@ -19,7 +31,6 @@ const Form = ({ signUp }) => {
         setServiceNeeded(e.target.value);
     };
 
-
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -31,7 +42,7 @@ const Form = ({ signUp }) => {
                 console.log(error.text);
             });
     };
-
+    
     return (
         <div className="form_page ">
             <img  className="x" src={closeImg} alt="x" onClick={turnSignUpFalse}/>
@@ -63,7 +74,8 @@ const Form = ({ signUp }) => {
                     required /><br />
                 <textarea name="message" color="0" rows="0" value={serviceNeeded} hidden={true}/>
                 <br />
-                <button type="submit" > send message</button>
+                <button onClick={notify} stype="submit" > send message</button>
+               
             </form>
 
 

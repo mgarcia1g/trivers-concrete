@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import '../company-info-component/company-info-component.css'
 import logo from '../../../images/logo.png'
-
 import stoneColumnImg from '../../../images/stoneColumn.png'
 import driveway from '../../../images/driveway.png'
 import foundations from '../../../images/foundations.png'
@@ -20,6 +19,7 @@ export default function CompanyInfoComponent() {
             behavior: 'smooth',
         });
     }
+    
    
     return (
         <div className="main">
